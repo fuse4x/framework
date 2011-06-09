@@ -145,7 +145,7 @@
 					"-D_FILE_OFFSET_BITS=64",
 					"-DFUSE_USE_VERSION=26",
 				);
-				OTHER_LDFLAGS = "-lfuse_ino64";
+				OTHER_LDFLAGS = "-lfuse4x";
 				PRODUCT_NAME = "«PROJECTNAME»";
 			};
 			name = Debug;
@@ -163,7 +163,7 @@
 					"-D_FILE_OFFSET_BITS=64",
 					"-DFUSE_USE_VERSION=26",
 				);
-				OTHER_LDFLAGS = "-lfuse_ino64";
+				OTHER_LDFLAGS = "-lfuse4x";
 				PRODUCT_NAME = "«PROJECTNAME»";
 			};
 			name = Release;

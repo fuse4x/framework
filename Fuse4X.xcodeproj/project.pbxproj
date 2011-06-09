@@ -285,7 +285,7 @@
 					"-D_FILE_OFFSET_BITS=64",
 					"-std=c99",
 				);
-				OTHER_LDFLAGS = "-lfuse";
+				OTHER_LDFLAGS = "-lfuse4x";
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 				VALID_ARCHS = "i386 x86_64";
@@ -316,7 +316,7 @@
 					"-std=c99",
 					"${CUSTOM_CFLAGS}",
 				);
-				OTHER_LDFLAGS = "-lfuse";
+				OTHER_LDFLAGS = "-lfuse4x";
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 				SEPARATE_STRIP = NO;
@@ -349,7 +349,7 @@
 					"${CUSTOM_CFLAGS}",
 				);
 				OTHER_LDFLAGS = (
-					"-lfuse",
+					"-lfuse4x",
 					"-L/opt/local/lib",
 				);
 				PRODUCT_NAME = Fuse4X;
@@ -378,7 +378,7 @@
 					"${CUSTOM_CFLAGS}",
 				);
 				OTHER_LDFLAGS = (
-					"-lfuse",
+					"-lfuse4x",
 					"-L/opt/local/lib",
 				);
 				PRODUCT_NAME = Fuse4X;

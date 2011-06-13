@@ -321,7 +321,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Fuse4X_Prefix.pch;
-				HEADER_SEARCH_PATHS = /opt/local/include;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Info copy.plist";
 				INSTALL_PATH = /Library/Frameworks;
 				OTHER_CFLAGS = (
@@ -349,7 +349,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Fuse4X_Prefix.pch;
-				HEADER_SEARCH_PATHS = /opt/local/include;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Info copy.plist";
 				INSTALL_PATH = /Library/Frameworks;
 				OTHER_CFLAGS = (

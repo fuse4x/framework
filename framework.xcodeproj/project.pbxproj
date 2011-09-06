@@ -270,7 +270,7 @@
 				);
 				OTHER_LDFLAGS = "-lfuse4x";
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = "";
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -300,7 +300,7 @@
 				);
 				OTHER_LDFLAGS = "-lfuse4x";
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = "";
 				SEPARATE_STRIP = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -332,10 +332,9 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lfuse4x",
-					"-L/opt/local/lib",
 				);
 				PRODUCT_NAME = Fuse4X;
-				SDKROOT = macosx10.6;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
 			};
@@ -361,10 +360,9 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lfuse4x",
-					"-L/opt/local/lib",
 				);
 				PRODUCT_NAME = Fuse4X;
-				SDKROOT = macosx10.6;
+				SDKROOT = "";
 				STRIPFLAGS = "";
 				WRAPPER_EXTENSION = framework;
 			};

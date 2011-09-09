@@ -378,6 +378,19 @@ typedef enum {
   return (GMUserFileSystem *)context->private_data;
 }
 
+- (void)notifyMounted {
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    // Successfully mounted, so post notification.
+    NSDictionary* userInfo =
+    [NSDictionary dictionaryWithObjectsAndKeys:
+     [internal_ mountPath], kGMUserFileSystemMountPathKey, nil, nil];
+
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:kGMUserFileSystemDidMount object:self
+                        userInfo:userInfo];
+    [pool release];
+}
+
 - (void)fuseInit {
   [internal_ setStatus:GMUserFileSystem_INITIALIZING];
 
@@ -395,14 +408,10 @@ typedef enum {
     }
   }
 
-  // Successfully mounted, so post notification.
-  NSDictionary* userInfo =
-    [NSDictionary dictionaryWithObjectsAndKeys:
-      [internal_ mountPath], kGMUserFileSystemMountPathKey, nil, nil];
-
-  NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center postNotificationName:kGMUserFileSystemDidMount object:self
-            userInfo:userInfo];
+  [internal_ setStatus:GMUserFileSystem_MOUNTED];
+      [NSThread detachNewThreadSelector:@selector(notifyMounted)
+                                 toTarget:self
+                                 withObject:nil];
 }
 
 - (void)fuseDestroy {

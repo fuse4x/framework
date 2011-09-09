@@ -327,12 +327,11 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-D_FILE_OFFSET_BITS=64",
+					"-D__DARWIN_64_BIT_INO_T=1",
 					"-std=c99",
 					"${CUSTOM_CFLAGS}",
 				);
-				OTHER_LDFLAGS = (
-					"-lfuse4x",
-				);
+				OTHER_LDFLAGS = "-lfuse4x";
 				PRODUCT_NAME = Fuse4X;
 				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
@@ -355,12 +354,11 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-D_FILE_OFFSET_BITS=64",
+					"-D__DARWIN_64_BIT_INO_T=1",
 					"-std=c99",
 					"${CUSTOM_CFLAGS}",
 				);
-				OTHER_LDFLAGS = (
-					"-lfuse4x",
-				);
+				OTHER_LDFLAGS = "-lfuse4x";
 				PRODUCT_NAME = Fuse4X;
 				SDKROOT = "";
 				STRIPFLAGS = "";

@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Copyright (c) 2011, Anatol Pomozov. All rights reserved.
+
 # Possible flags are:
 #   --debug       this builds distribuition with debug flags enabled
 #   --root DIR    install the binary into this directory. If this flag is not set - the script

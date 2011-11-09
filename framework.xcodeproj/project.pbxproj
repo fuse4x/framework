@@ -327,7 +327,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_CFLAGS = (
 					"-D_FILE_OFFSET_BITS=64",
-					"-D__DARWIN_64_BIT_INO_T=1",
+					"-D_DARWIN_USE_64_BIT_INODE",
 					"-std=c99",
 					"${CUSTOM_CFLAGS}",
 				);
@@ -354,7 +354,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_CFLAGS = (
 					"-D_FILE_OFFSET_BITS=64",
-					"-D__DARWIN_64_BIT_INO_T=1",
+					"-D_DARWIN_USE_64_BIT_INODE",
 					"-std=c99",
 					"${CUSTOM_CFLAGS}",
 				);

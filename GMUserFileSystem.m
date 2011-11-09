@@ -793,7 +793,7 @@ typedef enum {
     stbuf->st_ctimespec.tv_nsec = t_nsec;
   }
 
-#if __DARWIN_64_BIT_INO_T
+#ifdef _DARWIN_FEATURE_64_BIT_INODE
   NSDate* bdate = [attributes objectForKey:NSFileCreationDate];
   if (bdate) {
     const double seconds_dp = [bdate timeIntervalSince1970];
@@ -2230,7 +2230,7 @@ static struct fuse_operations fusefm_oper = {
 }
 
 // The stat field member we use to check for a dead file system.
-#if __DARWIN_64_BIT_INO_T
+#ifdef _DARWIN_FEATURE_64_BIT_INODE
 #define DEAD_FS_FIELD f_fssubtype
 #else
 #define DEAD_FS_FIELD f_reserved1

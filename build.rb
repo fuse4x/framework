@@ -32,6 +32,10 @@ system("sudo mkdir -p #{install_path}") if root_dir
 
 system("sudo cp -R build/#{configuration}/Fuse4X.framework #{install_path}") or abort
 
+if release then
+  system("cd #{install_path} && sudo ln -s Fuse4X.framework MacFUSE.framework") or abort
+  system("cd #{install_path}/MacFUSE.framework/Versions/A/ && sudo ln -s Fuse4X MacFUSE") or abort
+end
 
 # TODO:
 # Framework should use dylib/header files from root_dir

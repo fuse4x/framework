@@ -1072,7 +1072,7 @@ typedef enum {
                 error:(NSError **)error {
   if (FUSE4X_OBJC_DELEGATE_ENTRY_ENABLED()) {
     NSString* traceinfo =
-      [NSString stringWithFormat:@"%@, userData=%p, offset=%lld, size=%d",
+      [NSString stringWithFormat:@"%@, userData=%p, offset=%lld, size=%zd",
        path, userData, offset, size];
     FUSE4X_OBJC_DELEGATE_ENTRY(DTRACE_STRING(traceinfo));
   }
@@ -1108,7 +1108,7 @@ typedef enum {
                  error:(NSError **)error {
   if (FUSE4X_OBJC_DELEGATE_ENTRY_ENABLED()) {
     NSString* traceinfo =
-      [NSString stringWithFormat:@"%@, userData=%p, offset=%lld, size=%d",
+      [NSString stringWithFormat:@"%@, userData=%p, offset=%lld, size=%zd",
        path, userData, offset, size];
     FUSE4X_OBJC_DELEGATE_ENTRY(DTRACE_STRING(traceinfo));
   }
